@@ -1,31 +1,51 @@
-.App {
-  text-align: center;
-  font-family: "Courier New", monospace;
-  width: 100%;
+:root {
+    /* Color Scheme: Cheerful */
+    --dev-highlight:#00c853;
+    --dev-background:#80cbc4;
+    --dev-text:#050403;
+    --dev-highlight-text:#050403;
+    --dev-borders:#050403;
+
+    /* Color Scheme: Victory */
+    /* --dev-highlight:#D6C82D;
+    --dev-background:#2D3BD6;
+    --dev-text:#F6F7F8;
+    --dev-highlight-text:#050403;
+    --dev-borders:#050403; */
+
+    /* Color Scheme: Obnoxios */
+    /* --dev-highlight:#2B9533;
+    --dev-background:#952B8D;
+    --dev-text:#050403;
+    --dev-highlight-text:#F6F7F8;
+    --dev-borders:#050403; */
+
+    /* Color Scheme: Abyss */
+    /* --dev-highlight:#bdbdbd;
+    --dev-background:#424242;
+    --dev-text:#F6F7F8;
+    --dev-highlight-text:#050403;
+    --dev-borders:#050403; */
 }
 
-h1 {
-  font-weight: normal;
-  font-size: 42px;
+*{
+  margin:0;
+  padding:0;
 }
-
-.messages {
-  list-style: none;
-  padding: 0;
-  font-size: 32px;
-  margin-bottom: 2em;
+html, body{
+  height:100%;
 }
-
-.more {
-  font-size: 32px;
-  font-family: "Courier New", monospace;
-  border: 2px solid #000;
-  background-color: #fff;
-  padding: 10px 25px;
+#appContainer{
+  min-height:100%;
 }
-.more:hover {
-  background-color: #FDD836;
+#appNavigation{
 }
-.more:active {
-  background-color: #FFEFA9;
+#appBody{
+  Display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#appFooter{
+  height: 150px;
+  flex: 1;
 }

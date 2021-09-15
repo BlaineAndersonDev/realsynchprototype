@@ -1,0 +1,34 @@
+#navContainer{
+  background: var(--dev-background);
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-bottom: var(--dev-borders) 3px solid;
+}
+.navBox{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.navLink{
+  max-height:100px;
+  max-width:100px;
+  font-size: 2em;
+  text-decoration: none;
+  color: var(--dev-text);
+  background: var(--dev-background);
+  border: var(--dev-background) 2px solid;
+  border-bottom: none;
+  padding: 20px;
+  display: flex; /* Centers Text */
+  justify-content: center;/* Centers Text */
+  align-items: center;/* Centers Text */
+  transition: 0.25s linear;
+}
+.navLink:hover{
+  background: var(--dev-highlight);
+  color: var(--dev-highlight-text);
+  border: var(--dev-borders) 2px solid;
+  border-bottom: none;
+}

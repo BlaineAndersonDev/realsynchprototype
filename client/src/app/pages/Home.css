@@ -1,0 +1,23 @@
+#homeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.homeBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+}
+.homeHeader{
+  flex: 1;
+  font-size: 4em;
+  margin: 30px;
+  border-bottom: var(--dev-borders) 3px solid;
+}
+.homeText{
+  font-size: 1.5em;
+}
