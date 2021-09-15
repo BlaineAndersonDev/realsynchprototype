@@ -21,7 +21,7 @@
   background: var(--dev-background);
   border: var(--dev-background) 2px solid;
   padding: 20px;
-  magin: 20px;
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
