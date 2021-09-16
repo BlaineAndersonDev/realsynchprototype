@@ -1,4 +1,3 @@
-// Express is what allows our backend to receieve 'HTTP calls' from other sources, specifically our frontend.
 // https://expressjs.com/
 import express from 'express';
 // Path allows our Server to find build files stored in our frontend.
@@ -13,25 +12,8 @@ const port = process.env.PORT || 3001;
 // This line tells our app to use files in the Client's 'build' folder when rendering static pages (production pages).
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-// All API endpoints (routes) should begin with '/api'.
-// Loading 'localhost:3001/api/example' will direct you to this '/api/example' route.
-app.get('/api/messages', (req, res) => {
-  // Here we create a variable named 'helloWorld' that holds an object.
-  const helloWorld = [
-    {id: 1, message: 'Hello World!'},
-    {id: 2, message: 'This is pretty cool.'},
-    {id: 3, message: 'You got this working!'},
-    {id: 4, message: 'Amazing job!'}
-  ]
-  // We return the object in JSON to the calling point (Our browser).
-  res.json(helloWorld)
-});
-
-// Loading 'localhost:3001/api/' will direct you to this root '/api' route.
-app.get('/api', (req, res) => {
-  const message = 'This is the root API route!';
-  res.json(message)
-});
+// This tells the app to find all routes under '/api/messages' in the file 'messageController.js' in the new 'controllers' directory.
+app.use('/api/messages', require('./controllers/messageController.js'));
 
 // This is a catchall route to prevent the user from dealing with errors from visiting routes that do not exist. It sends a 404 (Not Found) Status as well as a message.
 app.get('/', (req, res) => {

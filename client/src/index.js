@@ -7,6 +7,7 @@ import { BrowserRouter } from 'react-router-dom';
 // This imports our actual App in order to display it to our browser.
 import App from './app/App.js';
 
+require('dotenv').config();
 // 'render' is what allows the App to be displayed. It's held inside of a 'Router' (BrowserRouter) so in the future we can implement additional route options. The entire thing is rendered at the element 'id' via HTML.
 render((
     <BrowserRouter>
