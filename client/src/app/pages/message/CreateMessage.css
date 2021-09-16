@@ -1,10 +1,14 @@
-#messageContainer {
+#createMessageContainer {
+  height: auto;
+  width: 100%;
+}
+.formFieldContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.messageDisplay {
+.formField {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -12,39 +16,29 @@
   flex-direction: column;
   padding: 10px;
   margin: 10px;
-  max-width: 1000px;
 }
-.messageButton{
-  flex: 1;
-  font-size: 2em;
+.formTitle{
+  font-size: 1.5em;
+  border-bottom: var(--dev-borders) 1px solid;
+}
+.formTextarea{
+  font-size: 1em;
+}
+.formButton{
+  font-size: 1em;
   text-decoration: none;
   color: var(--dev-text);
   background: var(--dev-background);
-  border: var(--dev-background) 2px solid;
-  padding: 20px;
-  magin: 20px;
+  border: var(--dev-background) 1px solid;
+  padding: 7px;
+  magin: 7px;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: 0.25s linear;
 }
-.messageButton:hover{
+.formButton:hover{
   background: var(--dev-highlight);
   color: var(--dev-highlight-text);
-  border: var(--dev-borders) 2px solid;
-}
-.messageHeader{
-  flex: 1;
-  font-size: 4em;
-  margin: 30px;
-  border-bottom: var(--dev-borders) 3px solid;
-}
-.messageText{
-  margin: 8px;
-  font-size: 2em;
-  list-style-type: none;
-}
-.messageTextContainer{
-  width: 70%;
-  margin-bottom: 50px;
+  border: var(--dev-borders) 1px solid;
 }

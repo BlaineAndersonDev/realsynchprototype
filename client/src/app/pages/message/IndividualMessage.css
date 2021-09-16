@@ -1,0 +1,74 @@
+.individualMessageContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  border: 1px var(--dev-borders) solid;
+  box-shadow: 1px 1px 1px var(--dev-borders);
+  margin: 10px;
+}
+  .messageDisplayWrapper{
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: row nowrap;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+  }
+    .idContainer{
+      display: flex;
+      flex-direction: row nowrap;
+      padding: 10px;
+      margin: 10px;
+    }
+    .individualMessageId {
+    }
+
+    .messageContainer {
+      display: flex;
+      flex-direction: row nowrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 1em;
+      width: 100%;
+      padding: 10px;
+      margin: 10px;
+    }
+    .individualMessageMessage {
+    }
+
+    .buttonContainer{
+      display: flex;
+      flex-direction: row nowrap;
+    }
+    .individualMessageAlter {
+      padding: 5px;
+      margin: 5px;
+    }
+    .alterMessageButton{
+      font-size: 1em;
+      text-decoration: none;
+      color: var(--dev-text);
+      background: var(--dev-background);
+      border: var(--dev-background) 1px solid;
+      padding: 5px;
+      margin: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.25s linear;
+    }
+    .alterMessageButton:hover{
+      background: var(--dev-highlight);
+      color: var(--dev-highlight-text);
+      border: var(--dev-borders) 1px solid;
+    }
+
+  .messageEditWrapper {
+    width: 100%;
+  }
+
+  .messageDeleteWrapper {
+    width: 100%;
+  }

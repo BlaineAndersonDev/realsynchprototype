@@ -1,83 +1,80 @@
 import React, { Component } from 'react';
-import './Message.css';
+import './Student.css';
 import axios from 'axios';
 import IndividualMessage from './IndividualMessage.js';
 import CreateMessage from './CreateMessage.js';
 
-class Message extends Component {
+class Student extends Component {
   constructor(props){
     super(props);
     this.state = {
-      messages: [],
+      students: [],
     };
   };
 
-  // Async/Await Function: Runs upon Component load. It runs our 'getMessages' function to display all the current messages.
   async componentDidMount() {
     try {
       this.timer = setTimeout(() => {}, 1000);
-      await this.getMessages();
+      await this.getStudents();
     } catch (error) {
       console.log(error)
     }
   };
 
-  // Async/Await Function: Removes all messages from state.
-  removeMessagesFromState = async () => {
+  removeStudentsFromState = async () => {
     await this.setState({
-      messages: []
+      students: []
     })
   }
 
-  // Async/Await Function: Retreives all 'messages' from our API.
-  getMessages = async () => {
-    await axios.get(`/api/messages`)
+  getStudents = async () => {
+    await axios.get(`/api/students`)
     .catch(error => {
       console.warn(error);
     })
     .then(response => {
       this.setState({
-        messages: response.data
+        students: response.data
       })
     })
   };
 
   render() {
-    // During the render, we check if this.state.messages has any objects.
+    // During the render, we check if this.state.students has any objects.
     let messageDisplay;
-    if (this.state.messages.length >= 1) {
+    if (this.state.students.length >= 1) {
       // If yes, we display those objects as well as:
-        // The 'removeMessagesFromState' option to remove objects from state,
-        // The '<CreateMessage />' Component to allow users to create their own messages,
+        // The 'removeStudentsFromState' option to remove objects from state,
+        // The '<CreateMessage />' Component to allow users to create their own students,
       messageDisplay = (
         <div className="messageDisplay">
-          <h1 className="messageHeader">{this.state.messages.length} Messages!</h1>
+          <h1 className="messageHeader">{this.state.students.length} Messages!</h1>
           <div className="messageTextContainer">
-            {this.state.messages.map((message, index) =>
+            {this.state.students.map((message, index) =>
               <IndividualMessage
                 key={message.id}
                 message={message}
-                getMessages={this.getMessages}
+                getStudents={this.getStudents}
               />
             )}
           </div>
-          <CreateMessage getMessages={this.getMessages}/>
+          <CreateMessage getStudents={this.getStudents}/>
           <button
             className="messageButton"
-            onClick={this.removeMessagesFromState}>
+            onClick={this.removeStudentsFromState}>
             Remove Messages From State?
           </button>
         </div>
       )
     } else {
-      // If no, then we display the option to 'getMessages' from the API.
+      // If no, then we display the option to 'getStudents' from the API.
       messageDisplay = (
         <div className="messageDisplay">
-          <h1 className="messageHeader">No messages :(</h1>
-          <CreateMessage getMessages={this.getMessages}/>
+          <h1 className="messageHeader">No students :(</h1>
+          <CreateMessage getStudents={this.getStudents}/>
           <button
             className="messageButton"
-            onClick={this.getMessages}>
+            onClick={this.getStudents}>
             Get Messages From API?
           </button>
         </div>
@@ -92,4 +89,4 @@ class Message extends Component {
   }
 }
 
-export default Message;
+export default Student;

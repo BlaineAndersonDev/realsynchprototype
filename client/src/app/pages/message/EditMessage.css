@@ -1,0 +1,45 @@
+#editMessageContainer {
+  height: auto;
+  width: 100%;
+}
+.formFieldEditContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formFieldEdit {
+  flex: 1;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.formEditTitle{
+  font-size: 1em;
+}
+.formEditTextarea{
+  flex-grow: 3;
+  font-size: 1em;
+}
+.formEditButton, .cancelEditButton{
+  flex: 1;
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--dev-text);
+  background: var(--dev-background);
+  border: var(--dev-background) 1px solid;
+  padding: 7px;
+  margin: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s linear;
+}
+.formEditButton:hover, .cancelEditButton:hover {
+  background: var(--dev-highlight);
+  color: var(--dev-highlight-text);
+  border: var(--dev-borders) 1px solid;
+}
+

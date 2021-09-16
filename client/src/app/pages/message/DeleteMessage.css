@@ -1,0 +1,45 @@
+#deleteMessageContainer {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.deleteTitle {
+  font-size: 1em;
+  padding: 5px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  border-top: 1px black solid;
+}
+.deleteButtonWrapper {
+  display: flex;
+  flex-direction: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.deleteButton {
+  flex: 1;
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--dev-text);
+  background: var(--dev-background);
+  border: var(--dev-background) 1px solid;
+  padding: 7px;
+  margin: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.25s linear;
+}
+.deleteButton:hover {
+  background: var(--dev-highlight);
+  color: var(--dev-highlight-text);
+  border: var(--dev-borders) 1px solid;
+}
